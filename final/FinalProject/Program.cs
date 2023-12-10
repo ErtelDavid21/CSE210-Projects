@@ -11,7 +11,7 @@ class Program
         do
         {
             Console.WriteLine("Do you want to open up your library? (yes or no)");
-            string open = "access";
+            string open = Console.ReadLine();
         
 
             // Determine if the Library is being used
@@ -33,7 +33,7 @@ class Program
                 }
 
                 user.StartLibrary(toDo);
-                
+
                 
             }
             if (open.ToLower() == "no")
