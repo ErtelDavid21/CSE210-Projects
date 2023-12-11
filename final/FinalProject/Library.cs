@@ -74,14 +74,23 @@ class Library
             // only cares about the inputs 1 to 3
             if (addTo == 1)
             {
-                //Get Ebook Info
+                
                 //call to Ebook info creator
+
+                //Set ebook Author info
                 Console.WriteLine("Who is the Author of the ebook?");
                 deEbook = Console.ReadLine();
                 deDigital.deSetAuthors(deEbook);
+
+                //Set Title for ebook
                 Console.WriteLine("What is the Title of the ebook?");
                 deEbook = Console.ReadLine();
                 deDigital.deSetTitles(deEbook);
+
+                //Set location for ebook
+                Console.WriteLine("Where is the ebook stored?");
+                deLocale = Console.ReadLine();
+                dePlace.deSetLocation(deLocale);
             }
             if (addTo == 2)
             {
@@ -92,6 +101,7 @@ class Library
                 Console.WriteLine("What is the Title of the ebook?");
                 dePbook = Console.ReadLine();
                 deDigital.deSetTitles(dePbook);
+
             }
             else
             {
