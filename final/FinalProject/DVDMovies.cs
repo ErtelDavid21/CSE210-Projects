@@ -3,23 +3,23 @@ using System;
 class DVDMovies:Library
 {
 
-    public List<string> company = new List<string>();
-    public List<string> movies = new List<string>();
+    public List<string> deCompany = new List<string>();
+    public List<string> deMovies = new List<string>();
 
-    //Method to get list of companies who made the games
-    public List<string> GetCompany(string info)
+    //Method to get list of companies who made the movies
+    public List<string> deGetCompany(string deInfo)
     {
         
-        company.Add(info);
-        return company;
+        deCompany.Add(deInfo);
+        return deCompany;
     }
 
-    //Method to get video game names
-    public List<string> GetMovies(string list)
+    //Method to get movie names
+    public List<string> deGetMovies(string deList)
     {
     
-        movies.Add(list);
+        deMovies.Add(deList);
 
-        return movies;
+        return deMovies;
     }
 }

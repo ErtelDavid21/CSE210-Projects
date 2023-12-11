@@ -3,19 +3,19 @@ using System;
 class Music:Library
 {
     //Method to get artist list
-    public List<string> GetArtist(string info)
+    public List<string> deGetArtist(string deInfo)
     {
-        List<string> creator = new List<string>();
-        creator.Add(info);
-        return creator;
+        List<string> deCreator = new List<string>();
+        deCreator.Add(deInfo);
+        return deCreator;
     }
 
     //Method to get song names
-    public List<string> GetSongNames(string names)
+    public List<string> deGetSongNames(string deNames)
     {
-        List<string> songs = new List<string>();
-        songs.Add(names);
+        List<string> deSongs = new List<string>();
+        deSongs.Add(deNames);
 
-        return songs;
+        return deSongs;
     }
 }

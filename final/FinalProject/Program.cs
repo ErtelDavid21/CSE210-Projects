@@ -7,48 +7,48 @@ class Program
     public static void Main()
     {
         Console.WriteLine("This is the final Project");
-        Boolean activate = true;
+        Boolean deActivate = true;
         do
         {
             Console.WriteLine("Do you want to open up your library? (yes or no)");
-            string open = Console.ReadLine();
+            string deOpen = Console.ReadLine();
         
 
             // Determine if the Library is being used
-            if (open.ToLower() == "yes")
+            if (deOpen.ToLower() == "yes")
             {
                 //start the library
-                Library user = new Library();
+                Library deUser = new Library();
                 
                 Console.WriteLine("What would you like to do?");
                 Console.WriteLine("(1: Display Info, 2: Add Info, 3. Alter Info)");
 
-                string task = Console.ReadLine();
-                int choice = Convert.ToInt32(task);
-                int toDo = 0;
+                string deTask = Console.ReadLine();
+                int deChoice = Convert.ToInt32(deTask);
+                int deToDo = 0;
 
-                if (choice >= 1 || choice <= 3)
+                if (deChoice >= 1 || deChoice <= 3)
                 {
-                    toDo = choice;
+                    deToDo = deChoice;
                 }
 
-                user.StartLibrary(toDo);
+                deUser.deStartLibrary(deToDo);
 
                 
             }
-            if (open.ToLower() == "no")
+            if (deOpen.ToLower() == "no")
             {
                 //Quits the program
 
                 Console.WriteLine("You have chosen to exit, have a good day");
-                activate = false;
+                deActivate = false;
             }
             else
             {
                 Console.WriteLine("Unrecognized input, please try again.");
 
             }
-        }while (activate == true);
+        }while (deActivate == true);
     }
     
         

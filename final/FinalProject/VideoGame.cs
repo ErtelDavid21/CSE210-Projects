@@ -2,20 +2,23 @@ using System;
 
 class VideoGame:Library
 {
+    public List<string> deCompany = new List<string>();
+    List<string> deGames = new List<string>();
+
     //Method to get list of companies who made the games
-    public List<string> GetCompany(string info)
+    public List<string> deGetCompany(string deInfo)
     {
-        List<string> company = new List<string>();
-        company.Add(info);
-        return company;
+        
+        deCompany.Add(deInfo);
+        return deCompany;
     }
 
     //Method to get video game names
-    public List<string> GetGameNames(string list)
+    public List<string> deGetGameNames(string deList)
     {
-        List<string> games = new List<string>();
-        games.Add(list);
+        
+        deGames.Add(deList);
 
-        return games;
+        return deGames;
     }
 }

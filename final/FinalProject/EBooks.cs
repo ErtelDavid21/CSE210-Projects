@@ -3,44 +3,44 @@ using System;
 class Ebooks:Library
 {
 
-    public List<string> DEauthor = new List<string>();
-    public List<string> DEtitle = new List<string>();
+    public List<string> deauthor = new List<string>();
+    public List<string> detitle = new List<string>();
 
     //Method to get list of companies who made the title
-    public List<string> DESetAuthors(string DEinfo)
+    public List<string> deSetAuthors(string deinfo)
     {
         
-        DEauthor.Add(DEinfo);
-        return DEauthor;
+        deauthor.Add(deinfo);
+        return deauthor;
     }
 
     //Method to list titles
-    public List<string> DESetTitles(string DElist)
+    public List<string> deSetTitles(string delist)
     {
         
-        DEtitle.Add(DElist);
+        detitle.Add(delist);
 
-        return DEtitle;
+        return detitle;
     }
 
     //Tell the Authors
-    public void DEGetAuthors()
+    public void deGetAuthors()
     {
         Console.WriteLine("Do you want the full list or an individual point? (1:Full, 2:Individual)");
-        string DEshow = Console.ReadLine();
-        int DEpoints = Convert.ToInt32(DEshow);
+        string deshow = Console.ReadLine();
+        int depoints = Convert.ToInt32(deshow);
 
-        if (DEpoints == 1)
+        if (depoints == 1)
         {
-            Console.WriteLine("The list of Authors is ",DEauthor);
+            Console.WriteLine("The list of Authors is ",deauthor);
         }
-        if (DEpoints == 2)
+        if (depoints == 2)
         {
             Console.WriteLine("What point in the list do you want to find?");
-            string DElistPoint = Console.ReadLine();
-            int DEfound = Convert.ToInt32(DElistPoint);
+            string delistPoint = Console.ReadLine();
+            int defound = Convert.ToInt32(delistPoint);
 
-            Console.WriteLine("The author listed at point ",DEfound," is ",DEauthor[DEfound]);
+            Console.WriteLine("The author listed at point ",defound," is ",deauthor[defound]);
         }
     }
 }

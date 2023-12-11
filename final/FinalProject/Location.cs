@@ -3,23 +3,23 @@ using System;
 class Location:Library
 {
 
-    public List<string> local = new List<string>();
-    public List<string> area = new List<string>();
+    public List<string> deLocal = new List<string>();
+    public List<string> deArea = new List<string>();
 
-    //Method to get list of companies who made the games
-    public List<string> GetLocation(string info)
+    //Method to get list of locations
+    public List<string> deGetLocation(string deInfo)
     {
         
-        local.Add(info);
-        return local;
+        deLocal.Add(deInfo);
+        return deLocal;
     }
 
-    //Method to get video game names
-    public List<string> SetLocation(string list)
+    //Method to set location
+    public List<string> deSetLocation(string deList)
     {
         
-        area.Add(list);
+        deArea.Add(deList);
 
-        return area;
+        return deArea;
     }
 }

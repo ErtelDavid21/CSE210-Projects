@@ -5,53 +5,53 @@ class Library
 {
 
     // A list of info
-    protected List<string> library = new List<string>();
+    protected List<string> deLibrary = new List<string>();
 
     // Set up variables to call to each class
-    private Ebooks digital         = new Ebooks();
-    private PhysicalBooks physical = new PhysicalBooks();
-    private Location place         = new Location();
-    private DVDMovies dvd          = new DVDMovies();
-    private VHSMovies vhs          = new VHSMovies();
-    private VideoGame game         = new VideoGame();
-    private Music sounds           = new Music();
+    private Ebooks deDigital         = new Ebooks();
+    private PhysicalBooks dePhysical = new PhysicalBooks();
+    private Location dePlace         = new Location();
+    private DVDMovies deDvd          = new DVDMovies();
+    private VHSMovies deVhs          = new VHSMovies();
+    private VideoGame deGame         = new VideoGame();
+    private Music deSounds           = new Music();
 
     //Load info
-    protected string ebook;
-    protected string pbook;
-    protected string locale;
-    protected string oldMovieStudio;
-    protected string newMovieStudio;
-    protected string composer;
-    protected string gaming;
+    protected string deEbook;
+    protected string dePbook;
+    protected string deLocale;
+    protected string deOldMovieStudio;
+    protected string deNewMovieStudio;
+    protected string deComposer;
+    protected string deGaming;
 
 
 
     
 
-    public int StartLibrary(int task)
+    public int deStartLibrary(int deTask)
     {
         
         
-        if (task == 1)
+        if (deTask == 1)
         {
             Console.WriteLine("You want to see the Library info");
-            return task;
+            return deTask;
         }
-        if (task == 2)
+        if (deTask == 2)
         {
             Console.WriteLine("You want to add info to your Library");
-            return task;
+            return deTask;
         }
-        if (task == 3)
+        if (deTask == 3)
         {
             Console.WriteLine("You want to change info given");
-            return task;
+            return deTask;
         }
         else
         {
             Console.WriteLine("You have chosen a task that doesn't exist");
-            return task;
+            return deTask;
         }
 
     }
@@ -74,12 +74,24 @@ class Library
             // only cares about the inputs 1 to 3
             if (addTo == 1)
             {
+                //Get Ebook Info
                 //call to Ebook info creator
-                digital.DESetAuthors(ebook);
+                Console.WriteLine("Who is the Author of the ebook?");
+                deEbook = Console.ReadLine();
+                deDigital.deSetAuthors(deEbook);
+                Console.WriteLine("What is the Title of the ebook?");
+                deEbook = Console.ReadLine();
+                deDigital.deSetTitles(deEbook);
             }
             if (addTo == 2)
             {
                 //call to Physical book info creator
+                Console.WriteLine("Who is the Author of the ebook?");
+                dePbook = Console.ReadLine();
+                deDigital.deSetAuthors(dePbook);
+                Console.WriteLine("What is the Title of the ebook?");
+                dePbook = Console.ReadLine();
+                deDigital.deSetTitles(dePbook);
             }
             else
             {
@@ -105,34 +117,34 @@ class Library
         if (info.ToLower() == "author")
         {
             // Calls author info from Ebooks.cs and PhysicalBooks.cs
-            digital.DEGetAuthors();
-            List<string> pAuthor = physical.GetAuthor(pbook);
-            Console.WriteLine("The Authors are: "," ",pAuthor);
+            deDigital.deGetAuthors();
+            List<string> dePAuthor = dePhysical.deGetAuthor(dePbook);
+            Console.WriteLine("The Authors are: "," ",dePAuthor);
             
         }
         if (info.ToLower() == "location")
         {
             // Calls Storage location info from Location.cs
-            List<string> setting = place.GetLocation(locale);
+            List<string> setting = dePlace.deGetLocation(deLocale);
             Console.WriteLine("The Locations are: ",setting);
             
         }
         if (info.ToLower() == "movie studio")
         {
             // Calls Movie Creator info from DVDMovies.cs and VHSMovies.cs
-            List<string> newMovies = dvd.GetCompany(newMovieStudio);
-            List<string> oldMovies = dvd.GetCompany(oldMovieStudio);
+            List<string> deNewMovies = deDvd.deGetCompany(deNewMovieStudio);
+            List<string> deOldMovies = deDvd.deGetCompany(deOldMovieStudio);
             Console.WriteLine("The Movie Studios you have movies from are: ");
         }
         if (info.ToLower() == "artist")
         {
             // Calls Artist info from Music.cs
-            List<string> artist = sounds.GetArtist(composer);
+            List<string> deArtist = deSounds.deGetArtist(deComposer);
         }
         if (info.ToLower() == "game company")
         {
             // Calls Video Game info from VideoGame.cs
-            List<string> console = game.GetCompany(gaming);
+            List<string> deConsole = deGame.deGetCompany(deGaming);
         }
         else
         {

@@ -2,16 +2,16 @@ using System;
 
 class PhysicalBooks:Library
 {
-    //Method to get list of companies who made the games
-    public List<string> GetAuthor(string info)
+    //Method to get list of authors of the books
+    public List<string> deGetAuthor(string deInfo)
     {
-        List<string> author = new List<string>();
-        author.Add(info);
-        return author;
+        List<string> deAuthor = new List<string>();
+        deAuthor.Add(deInfo);
+        return deAuthor;
     }
 
-    //Method to get video game names
-    public List<string> GetBookTitle(string list)
+    //Method to get physical book titles
+    public List<string> deGetBookTitle(string list)
     {
         List<string> books = new List<string>();
         books.Add(list);
